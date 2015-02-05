@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		CC92FB1D1A8424AD00E74BEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB1C1A8424AD00E74BEE /* main.m */; };
 		CC92FB201A8424AD00E74BEE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB1F1A8424AD00E74BEE /* AppDelegate.m */; };
-		CC92FB231A8424AD00E74BEE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB221A8424AD00E74BEE /* ViewController.m */; };
 		CC92FB261A8424AD00E74BEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC92FB241A8424AD00E74BEE /* Main.storyboard */; };
 		CC92FB281A8424AD00E74BEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC92FB271A8424AD00E74BEE /* Images.xcassets */; };
 		CC92FB2B1A8424AD00E74BEE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC92FB291A8424AD00E74BEE /* LaunchScreen.xib */; };
 		CC92FB371A8424AE00E74BEE /* Vine_ViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB361A8424AE00E74BEE /* Vine_ViewerTests.m */; };
+		CC92FB431A842A3F00E74BEE /* VideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB421A842A3F00E74BEE /* VideosTableViewController.m */; };
+		CC92FB471A842B0F00E74BEE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB461A842B0F00E74BEE /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		CC92FB1C1A8424AD00E74BEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC92FB1E1A8424AD00E74BEE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC92FB1F1A8424AD00E74BEE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CC92FB211A8424AD00E74BEE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CC92FB221A8424AD00E74BEE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC92FB251A8424AD00E74BEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC92FB271A8424AD00E74BEE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CC92FB2A1A8424AD00E74BEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CC92FB301A8424AE00E74BEE /* Vine ViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vine ViewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC92FB351A8424AE00E74BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC92FB361A8424AE00E74BEE /* Vine_ViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vine_ViewerTests.m; sourceTree = "<group>"; };
+		CC92FB411A842A3F00E74BEE /* VideosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosTableViewController.h; sourceTree = "<group>"; };
+		CC92FB421A842A3F00E74BEE /* VideosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosTableViewController.m; sourceTree = "<group>"; };
+		CC92FB451A842B0F00E74BEE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		CC92FB461A842B0F00E74BEE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +84,10 @@
 		CC92FB191A8424AD00E74BEE /* Vine Viewer */ = {
 			isa = PBXGroup;
 			children = (
+				CC92FB401A8426E800E74BEE /* Screen 1 - Video List */,
+				CC92FB441A842AC300E74BEE /* Screen 2 - Detail View */,
 				CC92FB1E1A8424AD00E74BEE /* AppDelegate.h */,
 				CC92FB1F1A8424AD00E74BEE /* AppDelegate.m */,
-				CC92FB211A8424AD00E74BEE /* ViewController.h */,
-				CC92FB221A8424AD00E74BEE /* ViewController.m */,
 				CC92FB241A8424AD00E74BEE /* Main.storyboard */,
 				CC92FB271A8424AD00E74BEE /* Images.xcassets */,
 				CC92FB291A8424AD00E74BEE /* LaunchScreen.xib */,
@@ -117,6 +120,24 @@
 				CC92FB351A8424AE00E74BEE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC92FB401A8426E800E74BEE /* Screen 1 - Video List */ = {
+			isa = PBXGroup;
+			children = (
+				CC92FB411A842A3F00E74BEE /* VideosTableViewController.h */,
+				CC92FB421A842A3F00E74BEE /* VideosTableViewController.m */,
+			);
+			name = "Screen 1 - Video List";
+			sourceTree = "<group>";
+		};
+		CC92FB441A842AC300E74BEE /* Screen 2 - Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				CC92FB451A842B0F00E74BEE /* DetailViewController.h */,
+				CC92FB461A842B0F00E74BEE /* DetailViewController.m */,
+			);
+			name = "Screen 2 - Detail View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC92FB231A8424AD00E74BEE /* ViewController.m in Sources */,
 				CC92FB201A8424AD00E74BEE /* AppDelegate.m in Sources */,
 				CC92FB1D1A8424AD00E74BEE /* main.m in Sources */,
+				CC92FB431A842A3F00E74BEE /* VideosTableViewController.m in Sources */,
+				CC92FB471A842B0F00E74BEE /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
