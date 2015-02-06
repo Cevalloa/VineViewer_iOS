@@ -15,6 +15,7 @@
 		CC92FB371A8424AE00E74BEE /* Vine_ViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB361A8424AE00E74BEE /* Vine_ViewerTests.m */; };
 		CC92FB431A842A3F00E74BEE /* VideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB421A842A3F00E74BEE /* VideosTableViewController.m */; };
 		CC92FB471A842B0F00E74BEE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB461A842B0F00E74BEE /* DetailViewController.m */; };
+		CC92FB4B1A84523100E74BEE /* UIViewController+ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB4A1A84523100E74BEE /* UIViewController+ConnectionController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		CC92FB421A842A3F00E74BEE /* VideosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosTableViewController.m; sourceTree = "<group>"; };
 		CC92FB451A842B0F00E74BEE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CC92FB461A842B0F00E74BEE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		CC92FB491A84523100E74BEE /* UIViewController+ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ConnectionController.h"; sourceTree = "<group>"; };
+		CC92FB4A1A84523100E74BEE /* UIViewController+ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ConnectionController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 			children = (
 				CC92FB401A8426E800E74BEE /* Screen 1 - Video List */,
 				CC92FB441A842AC300E74BEE /* Screen 2 - Detail View */,
+				CC92FB481A8451D600E74BEE /* Categories */,
 				CC92FB1E1A8424AD00E74BEE /* AppDelegate.h */,
 				CC92FB1F1A8424AD00E74BEE /* AppDelegate.m */,
 				CC92FB241A8424AD00E74BEE /* Main.storyboard */,
@@ -138,6 +142,15 @@
 				CC92FB461A842B0F00E74BEE /* DetailViewController.m */,
 			);
 			name = "Screen 2 - Detail View";
+			sourceTree = "<group>";
+		};
+		CC92FB481A8451D600E74BEE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				CC92FB491A84523100E74BEE /* UIViewController+ConnectionController.h */,
+				CC92FB4A1A84523100E74BEE /* UIViewController+ConnectionController.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC92FB4B1A84523100E74BEE /* UIViewController+ConnectionController.m in Sources */,
 				CC92FB201A8424AD00E74BEE /* AppDelegate.m in Sources */,
 				CC92FB1D1A8424AD00E74BEE /* main.m in Sources */,
 				CC92FB431A842A3F00E74BEE /* VideosTableViewController.m in Sources */,

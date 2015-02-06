@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VideosTableViewController : UITableViewController
+@interface VideosTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
