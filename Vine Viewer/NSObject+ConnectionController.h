@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (ConnectionController)
+@interface NSObject (ConnectionController)
 
+#pragma mark - Network Connectivity Methods
+
+//Connects initially to vine api and retrieves the JSON
 -(void)methodConnectToVineApi:(void(^)(NSDictionary *dictionaryWithVineJSON))completion;
+
+//Retrieves an image
+-(void)methodReturnImageFromVineApi:(NSString *)stringWithUrl completion:(void(^)(UIImage *imageReturned))completion;
+
+
 
 @end

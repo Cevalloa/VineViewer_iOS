@@ -7,7 +7,8 @@
 //
 
 #import "VideosTableViewController.h"
-#import "UIViewController+ConnectionController.h"
+#import "CustomCell.h"
+#import "NSObject+ConnectionController.h"
 
 @interface VideosTableViewController(){
 
@@ -42,12 +43,10 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *tableViewCellForTable = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    CustomCell *tableViewCellForTable = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
     
-    tableViewCellForTable.textLabel.text = arrayWithVineRecords[indexPath.row][@"description"];
-    
-    return tableViewCellForTable;
+    return [tableViewCellForTable methodCreateCell:arrayWithVineRecords[indexPath.row]];
 }
 
 @end

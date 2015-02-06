@@ -15,7 +15,8 @@
 		CC92FB371A8424AE00E74BEE /* Vine_ViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB361A8424AE00E74BEE /* Vine_ViewerTests.m */; };
 		CC92FB431A842A3F00E74BEE /* VideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB421A842A3F00E74BEE /* VideosTableViewController.m */; };
 		CC92FB471A842B0F00E74BEE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB461A842B0F00E74BEE /* DetailViewController.m */; };
-		CC92FB4B1A84523100E74BEE /* UIViewController+ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB4A1A84523100E74BEE /* UIViewController+ConnectionController.m */; };
+		CC92FB4B1A84523100E74BEE /* NSObject+ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB4A1A84523100E74BEE /* NSObject+ConnectionController.m */; };
+		CC92FB4E1A8535D200E74BEE /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB4D1A8535D200E74BEE /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +45,10 @@
 		CC92FB421A842A3F00E74BEE /* VideosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosTableViewController.m; sourceTree = "<group>"; };
 		CC92FB451A842B0F00E74BEE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CC92FB461A842B0F00E74BEE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		CC92FB491A84523100E74BEE /* UIViewController+ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ConnectionController.h"; sourceTree = "<group>"; };
-		CC92FB4A1A84523100E74BEE /* UIViewController+ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ConnectionController.m"; sourceTree = "<group>"; };
+		CC92FB491A84523100E74BEE /* NSObject+ConnectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ConnectionController.h"; sourceTree = "<group>"; };
+		CC92FB4A1A84523100E74BEE /* NSObject+ConnectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ConnectionController.m"; sourceTree = "<group>"; };
+		CC92FB4C1A8535D200E74BEE /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		CC92FB4D1A8535D200E74BEE /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 			children = (
 				CC92FB411A842A3F00E74BEE /* VideosTableViewController.h */,
 				CC92FB421A842A3F00E74BEE /* VideosTableViewController.m */,
+				CC92FB4C1A8535D200E74BEE /* CustomCell.h */,
+				CC92FB4D1A8535D200E74BEE /* CustomCell.m */,
 			);
 			name = "Screen 1 - Video List";
 			sourceTree = "<group>";
@@ -147,8 +152,8 @@
 		CC92FB481A8451D600E74BEE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				CC92FB491A84523100E74BEE /* UIViewController+ConnectionController.h */,
-				CC92FB4A1A84523100E74BEE /* UIViewController+ConnectionController.m */,
+				CC92FB491A84523100E74BEE /* NSObject+ConnectionController.h */,
+				CC92FB4A1A84523100E74BEE /* NSObject+ConnectionController.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -253,8 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC92FB4B1A84523100E74BEE /* UIViewController+ConnectionController.m in Sources */,
+				CC92FB4B1A84523100E74BEE /* NSObject+ConnectionController.m in Sources */,
 				CC92FB201A8424AD00E74BEE /* AppDelegate.m in Sources */,
+				CC92FB4E1A8535D200E74BEE /* CustomCell.m in Sources */,
 				CC92FB1D1A8424AD00E74BEE /* main.m in Sources */,
 				CC92FB431A842A3F00E74BEE /* VideosTableViewController.m in Sources */,
 				CC92FB471A842B0F00E74BEE /* DetailViewController.m in Sources */,

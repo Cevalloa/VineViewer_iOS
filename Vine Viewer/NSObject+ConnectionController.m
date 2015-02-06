@@ -6,10 +6,13 @@
 //  Copyright (c) 2015 AlexCevallos. All rights reserved.
 //
 
-#import "UIViewController+ConnectionController.h"
+#import "NSObject+ConnectionController.h"
 
-@implementation UIViewController (ConnectionController)
+@implementation NSObject (ConnectionController)
 
+#pragma mark - Network Connectivity Methods
+
+//Connects initially to vine api and retrieves the JSON
 -(void)methodConnectToVineApi:(void (^)(NSDictionary *))completion{
     NSString *urlString = @"https://vine.co/api/timelines/users/918753190470619136";
     
@@ -23,12 +26,7 @@
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
        
         NSDictionary *dictionaryWithVineFeed = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
-        
-   //  Uncomment for debugging
-//        NSLog(@"Returned JSON is.. %@", dictionaryWithVineFeed);
-//        NSLog(@"Error is.. %@", error);
-//        NSLog(@"Response code is.. %ld", (long)((NSHTTPURLResponse *)response).statusCode);
-        
+    
         dispatch_async(dispatch_get_main_queue(), ^{
             
             //If the HTTP status code is 200, proceed!
@@ -40,9 +38,38 @@
                 [alertViewShowingError show];
             }
         });
+        
+        //  Uncomment for debugging
+        //        NSLog(@"Returned JSON is.. %@", dictionaryWithVineFeed);
+        //        NSLog(@"Error is.. %@", error);
+        //        NSLog(@"Response code is.. %ld", (long)((NSHTTPURLResponse *)response).statusCode);
+        
     }];
     
     [task resume];
+}
+
+//Returns an image
+-(void)methodReturnImageFromVineApi:(NSString *)stringWithUrl completion:(void (^)(UIImage *))completion{
+    if (stringWithUrl.length == 0 || stringWithUrl == nil){
+        return;
+    }
+    
+    NSURL *url = [[NSURL alloc] initWithString:stringWithUrl];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+        NSData *data = [[NSData alloc] initWithContentsOfURL:location];
+        UIImage *image = [[UIImage alloc] initWithData:data];
+       
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(image);
+        });
+        
+    }];
+    
+    [task resume];
+    
 }
 
 @end
