@@ -37,6 +37,10 @@
     
 }
 
+-(void)viewDidLoad{
+    [self.tableView reloadData];
+}
+
 #pragma mark - Table View Data Source Methods
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [arrayWithVineRecords count];

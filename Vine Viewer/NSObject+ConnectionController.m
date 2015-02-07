@@ -7,6 +7,7 @@
 //
 
 #import "NSObject+ConnectionController.h"
+#import <SAMCache/SAMCache.h>
 
 @implementation NSObject (ConnectionController)
 
@@ -61,6 +62,11 @@
     NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
         NSData *data = [[NSData alloc] initWithContentsOfURL:location];
         UIImage *image = [[UIImage alloc] initWithData:data];
+        
+        //Caches the image for use in the future (saves data!)
+        [[SAMCache sharedCache] setImage:image forKey:stringWithUrl];
+        NSLog(@"Stored! %@", stringWithUrl);
+        
        
         dispatch_async(dispatch_get_main_queue(), ^{
             completion(image);
