@@ -65,7 +65,7 @@
         
         //Caches the image for use in the future (saves data!)
         [[SAMCache sharedCache] setImage:image forKey:stringWithUrl];
-        NSLog(@"Stored! %@", stringWithUrl);
+//        NSLog(@"Stored! %@", stringWithUrl);
         
        
         dispatch_async(dispatch_get_main_queue(), ^{

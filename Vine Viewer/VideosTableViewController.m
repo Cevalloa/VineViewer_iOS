@@ -53,4 +53,15 @@
     return [tableViewCellForTable methodCreateCell:arrayWithVineRecords[indexPath.row]];
 }
 
+#pragma mark - Table View Delegate Methods
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self performSegueWithIdentifier:@"segueVideoDetail" sender:nil];
+    
+}
+
+
+
+
+
 @end

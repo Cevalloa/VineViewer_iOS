@@ -31,7 +31,7 @@
     
     // If photo is cached, no need to network connect.. use the cached image instead
     if(photo){
-        NSLog(@"Already here! %@", dictionaryWithVideoInformation[@"thumbnailUrl"]);
+      //  NSLog(@"Already here! %@", dictionaryWithVideoInformation[@"thumbnailUrl"]);
         self.imageViewThumbnailUrl.image = photo;
         return self;
     }
