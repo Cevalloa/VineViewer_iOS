@@ -8,6 +8,7 @@
 
 #import "VideosTableViewController.h"
 #import "CustomCell.h"
+#import "DetailViewController.h"
 #import "NSObject+ConnectionController.h"
 
 @interface VideosTableViewController(){
@@ -26,7 +27,7 @@
     //Method from modal layer
     [self methodConnectToVineApi:^(NSDictionary *dictionaryWithVineJSON) {
         
-        //Assigns the vine records to this array
+        //Assigns the vine records to this array (app uses this array for all data)
         arrayWithVineRecords = dictionaryWithVineJSON[@"data"][@"records"];
         
         if (dictionaryWithVineJSON != nil){
@@ -56,8 +57,13 @@
 #pragma mark - Table View Delegate Methods
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    [self performSegueWithIdentifier:@"segueVideoDetail" sender:nil];
+    [self performSegueWithIdentifier:@"segueVideoDetail" sender:arrayWithVineRecords[indexPath.row]];
     
+}
+
+#pragma mark - Storyboard Segue Methods
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [segue.destinationViewController setDictionaryWithVideoDetailData:sender];
 }
 
 

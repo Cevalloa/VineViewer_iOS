@@ -19,6 +19,7 @@
 		CC92FB4B1A84523100E74BEE /* NSObject+ConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB4A1A84523100E74BEE /* NSObject+ConnectionController.m */; };
 		CC92FB4E1A8535D200E74BEE /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB4D1A8535D200E74BEE /* CustomCell.m */; };
 		CC92FB511A86D3F500E74BEE /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC92FB501A86D3F500E74BEE /* MediaPlayer.framework */; };
+		CC92FB541A87D15400E74BEE /* NSString+StringHelperMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = CC92FB531A87D15400E74BEE /* NSString+StringHelperMethods.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		CC92FB4D1A8535D200E74BEE /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		CC92FB4F1A85749200E74BEE /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		CC92FB501A86D3F500E74BEE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		CC92FB521A87D15400E74BEE /* NSString+StringHelperMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringHelperMethods.h"; sourceTree = "<group>"; };
+		CC92FB531A87D15400E74BEE /* NSString+StringHelperMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringHelperMethods.m"; sourceTree = "<group>"; };
 		DA2212EAB2AA970B380AF769 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +169,8 @@
 			children = (
 				CC92FB491A84523100E74BEE /* NSObject+ConnectionController.h */,
 				CC92FB4A1A84523100E74BEE /* NSObject+ConnectionController.m */,
+				CC92FB521A87D15400E74BEE /* NSString+StringHelperMethods.h */,
+				CC92FB531A87D15400E74BEE /* NSString+StringHelperMethods.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC92FB4B1A84523100E74BEE /* NSObject+ConnectionController.m in Sources */,
+				CC92FB541A87D15400E74BEE /* NSString+StringHelperMethods.m in Sources */,
 				CC92FB201A8424AD00E74BEE /* AppDelegate.m in Sources */,
 				CC92FB4E1A8535D200E74BEE /* CustomCell.m in Sources */,
 				CC92FB1D1A8424AD00E74BEE /* main.m in Sources */,

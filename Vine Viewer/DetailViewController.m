@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "NSString+StringHelperMethods.h"
 
 @interface DetailViewController()
 
@@ -17,37 +18,72 @@
 //Video player itself
 @property (nonatomic) MPMoviePlayerController *moviePlayer;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageViewAvatar;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelForName;
+@property (weak, nonatomic) IBOutlet UILabel *labelForDate;
+@property (weak, nonatomic) IBOutlet UILabel *labelForTotalLikes;
+@property (weak, nonatomic) IBOutlet UILabel *labelForTotalRevines;
+@property (weak, nonatomic) IBOutlet UILabel *labelForTotalComments;
+
+
 @end
 
 @implementation DetailViewController
 
 #pragma mark View Controller Lifecycle Methods
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:YES];
-    
-    //Initialize the video player
-    NSURL *urlForVideo = [[NSURL alloc] initWithString:@"http://v.cdn.vine.co/r/videos_r2/87A2E4519A1164309800809558016_3adb2e23be6.1.5.16213636071683769459.mp4?versionId=t_Edd7jN.ldlS44UdaZW9e.VpSvrB59_"];
-    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:urlForVideo];
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    //Sets up all the UI Elements, minus the video
+    [self methodSetupUIElements];
 }
+
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:YES];
     
-    //Set the frame and add it to the subview
-    [self.moviePlayer.view setFrame:self.viewWithVideoPlayer.bounds];
-    
-    [self.viewWithVideoPlayer addSubview:self.moviePlayer.view];
-    [self.moviePlayer prepareToPlay];
-
-    [self.moviePlayer play];
-
+    //Sets up the  video
+    [self methodSetupVideoPlayer];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:YES];
     
     [self.moviePlayer stop];
+}
+
+#pragma mark Movie Player Methods
+
+-(void)methodSetupVideoPlayer{
+    NSURL *urlForVideo = [[NSURL alloc] initWithString:self.dictionaryWithVideoDetailData[@"videoLowURL"]];
+    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:urlForVideo];
+    
+    //Set the frame and add it to the subview
+    [self.moviePlayer.view setFrame:self.viewWithVideoPlayer.bounds];
+    
+    [self.viewWithVideoPlayer addSubview:self.moviePlayer.view];
+    [self.moviePlayer prepareToPlay];
+    
+    [self.moviePlayer play];
+}
+
+#pragma mark - UI Element Methods
+
+-(void)methodSetupUIElements{
+    self.labelForName.text = self.dictionaryWithVideoDetailData[@"username"];
+    
+    //Grabs number from data, turns into string, then shortens it
+    NSString *stringLikesCount = [[self.dictionaryWithVideoDetailData[@"likes"][@"count"] stringValue] methodShortenNumber];
+    NSString *stringRepostsCount = [[self.dictionaryWithVideoDetailData[@"reposts"][@"count"] stringValue] methodShortenNumber];
+    NSString *stringCommentsCount = [[self.dictionaryWithVideoDetailData[@"comments"][@"count"] stringValue] methodShortenNumber];
+    
+    
+    self.labelForTotalLikes.text = [NSString stringWithFormat:@"%@ Likes", stringLikesCount];
+    self.labelForTotalRevines.text = [NSString stringWithFormat:@"%@ Revines", stringRepostsCount];
+    self.labelForTotalComments.text = [NSString stringWithFormat:@"%@ Comments", stringCommentsCount];
+    
 }
 
 @end

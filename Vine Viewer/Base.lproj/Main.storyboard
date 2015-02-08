@@ -149,6 +149,12 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="imageViewAvatar" destination="g4p-Fn-Pns" id="hL8-VQ-w5G"/>
+                        <outlet property="labelForDate" destination="HR7-lA-zrJ" id="WJg-0b-dQb"/>
+                        <outlet property="labelForName" destination="PDh-O6-lgl" id="aAE-uX-byB"/>
+                        <outlet property="labelForTotalComments" destination="wV1-j3-9rE" id="3Rz-xe-LJ6"/>
+                        <outlet property="labelForTotalLikes" destination="CAp-M4-QIF" id="HYH-6S-x9w"/>
+                        <outlet property="labelForTotalRevines" destination="Ner-Hl-LDW" id="bOH-2C-ark"/>
                         <outlet property="viewWithVideoPlayer" destination="6Ch-ne-0jT" id="f5E-DF-JtW"/>
                     </connections>
                 </viewController>
