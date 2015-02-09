@@ -13,20 +13,28 @@
 
 @interface DetailViewController()
 
-//Container for the video player
-@property (weak, nonatomic) IBOutlet UIView *viewWithVideoPlayer;
+//Containers for the video player
+//viewVideoContainerStarting:-
+//viewVideoContainerEndPoint:- Connected with autolayout, snaps animation to this
+
+@property (nonatomic) UIView *viewVideoContainerStarting;
+@property (weak, nonatomic) IBOutlet UIView *viewVideoContainerEndPoint;
 
 //Video player itself
 @property (nonatomic) MPMoviePlayerController *moviePlayer;
 
+//For animation
+@property (nonatomic) UIDynamicAnimator *animator;
+
+//IBoutlet imageViews
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewAvatar;
 
+//IBOutlet Labels
 @property (weak, nonatomic) IBOutlet UILabel *labelForName;
 @property (weak, nonatomic) IBOutlet UILabel *labelForDate;
 @property (weak, nonatomic) IBOutlet UILabel *labelForTotalLikes;
 @property (weak, nonatomic) IBOutlet UILabel *labelForTotalRevines;
 @property (weak, nonatomic) IBOutlet UILabel *labelForTotalComments;
-
 
 @end
 
@@ -39,14 +47,20 @@
     
     //Sets up all the UI Elements, minus the video
     [self methodSetupUIElements];
+
 }
 
 
 -(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:YES];
+    [super viewDidAppear:animated];
+
+    //Snap the video view down
+    [self methodAnimateSnapDown];
     
-    //Sets up the  video
+    //Sets up the  video to play
     [self methodSetupVideoPlayer];
+
+    //[self.viewFake addConstraints:self.viewWithVideoPlayer.constraints];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
@@ -61,13 +75,32 @@
     NSURL *urlForVideo = [[NSURL alloc] initWithString:self.dictionaryWithVideoDetailData[@"videoLowURL"]];
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:urlForVideo];
     
-    //Set the frame and add it to the subview
-    [self.moviePlayer.view setFrame:self.viewWithVideoPlayer.bounds];
+    //Set movie player frame to the container view
+    [self.moviePlayer.view setFrame:self.viewVideoContainerStarting.bounds];
     
-    [self.viewWithVideoPlayer addSubview:self.moviePlayer.view];
+    //Add movie player to the container view
+    [self.viewVideoContainerStarting addSubview:self.moviePlayer.view];
     [self.moviePlayer prepareToPlay];
     
     [self.moviePlayer play];
+}
+
+#pragma mark UI Animation Methods
+-(void)methodAnimateSnapDown{
+    
+    //Create view container on top (starting point)
+    self.viewVideoContainerStarting = [[UIView alloc] initWithFrame:CGRectMake(0.0, -320.0, self.viewVideoContainerEndPoint.frame.size.width, self.viewVideoContainerEndPoint.frame.size.height)];
+        
+    //Add the starting container to the end point
+    [self.viewVideoContainerEndPoint addSubview:self.viewVideoContainerStarting];
+    
+    //Create animator with reference to top level view
+    self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    
+    //Snap to the center of viewVideoContainerEndPoint (view with autolayout)
+    UISnapBehavior *snap = [[UISnapBehavior alloc] initWithItem:self.viewVideoContainerStarting snapToPoint:self.viewVideoContainerEndPoint.center];
+    [self.animator addBehavior:snap];
+    
 }
 
 #pragma mark - UI Element Methods
