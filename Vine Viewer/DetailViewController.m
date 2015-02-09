@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "NSString+StringHelperMethods.h"
+#import "NSObject+ConnectionController.h"
 
 @interface DetailViewController()
 
@@ -78,6 +79,7 @@
     NSString *stringLikesCount = [[self.dictionaryWithVideoDetailData[@"likes"][@"count"] stringValue] methodShortenNumber];
     NSString *stringRepostsCount = [[self.dictionaryWithVideoDetailData[@"reposts"][@"count"] stringValue] methodShortenNumber];
     NSString *stringCommentsCount = [[self.dictionaryWithVideoDetailData[@"comments"][@"count"] stringValue] methodShortenNumber];
+    NSString *stringAvatarUrl = self.dictionaryWithVideoDetailData[@"avatarUrl"];
 
     
     //Sets up the IBOutlets with their respective additional string
@@ -87,6 +89,11 @@
     
     //Turns Date from string into a custom format
     self.labelForDate.text = [self.dictionaryWithVideoDetailData[@"created"] methodFormatStringWithDate];
+    
+    //Fetches and sets the imageView as teh avatarUrl
+    [self methodReturnImageFromVineApi:stringAvatarUrl completion:^(UIImage *imageReturned) {
+        self.imageViewAvatar.image = imageReturned;
+    }];
     
 }
 
