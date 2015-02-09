@@ -25,13 +25,13 @@
                                                 <constraint firstAttribute="width" constant="85" id="chj-el-n9O"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxc-9x-hrO">
-                                            <rect key="frame" x="108" y="13" width="484" height="16"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxc-9x-hrO">
+                                            <rect key="frame" x="108" y="13" width="484" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hh-Qi-qTc">
-                                            <rect key="frame" x="108" y="44" width="484" height="14"/>
+                                            <rect key="frame" x="108" y="37" width="484" height="14"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -57,7 +57,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="7Hh-Qi-qTc" secondAttribute="trailing" id="Ywt-OJ-zcT"/>
                                         <constraint firstItem="7Hh-Qi-qTc" firstAttribute="leading" secondItem="uju-0V-NJq" secondAttribute="trailing" constant="5" id="aJp-xT-3Yy"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Da8-5g-2Kw" secondAttribute="bottom" id="fmI-VU-JjZ"/>
-                                        <constraint firstItem="7Hh-Qi-qTc" firstAttribute="top" secondItem="Cxc-9x-hrO" secondAttribute="bottom" constant="15" id="skI-4j-NQa"/>
+                                        <constraint firstItem="7Hh-Qi-qTc" firstAttribute="top" secondItem="Cxc-9x-hrO" secondAttribute="bottom" constant="7" id="skI-4j-NQa"/>
                                         <constraint firstItem="Cxc-9x-hrO" firstAttribute="leading" secondItem="uju-0V-NJq" secondAttribute="trailing" constant="5" id="zSi-Sl-6G9"/>
                                     </constraints>
                                     <variation key="default">
@@ -102,7 +102,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ch-ne-0jT">
                                 <rect key="frame" x="20" y="84" width="560" height="359"/>
-                                <color key="backgroundColor" red="0.34509803919999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.81568627449999997" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="QDa-ih-CBg"/>
                                 </constraints>
