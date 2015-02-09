@@ -74,15 +74,19 @@
 -(void)methodSetupUIElements{
     self.labelForName.text = self.dictionaryWithVideoDetailData[@"username"];
     
-    //Grabs number from data, turns into string, then shortens it
+    //Grabs number from data ], turns into string ], then shortens it]
     NSString *stringLikesCount = [[self.dictionaryWithVideoDetailData[@"likes"][@"count"] stringValue] methodShortenNumber];
     NSString *stringRepostsCount = [[self.dictionaryWithVideoDetailData[@"reposts"][@"count"] stringValue] methodShortenNumber];
     NSString *stringCommentsCount = [[self.dictionaryWithVideoDetailData[@"comments"][@"count"] stringValue] methodShortenNumber];
+
     
-    
+    //Sets up the IBOutlets with their respective additional string
     self.labelForTotalLikes.text = [NSString stringWithFormat:@"%@ Likes", stringLikesCount];
     self.labelForTotalRevines.text = [NSString stringWithFormat:@"%@ Revines", stringRepostsCount];
     self.labelForTotalComments.text = [NSString stringWithFormat:@"%@ Comments", stringCommentsCount];
+    
+    //Turns Date from string into a custom format
+    self.labelForDate.text = [self.dictionaryWithVideoDetailData[@"created"] methodFormatStringWithDate];
     
 }
 

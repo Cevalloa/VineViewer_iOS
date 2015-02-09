@@ -10,6 +10,11 @@
 
 @interface NSString (StringHelperMethods)
 
+//Shortens string numbers over 1000..
+//ex: 11000 -> 11k && 999 -> 999
 -(NSString *)methodShortenNumber;
 
+
+//Takes String in date foramt, returns new custom format
+-(NSString *)methodFormatStringWithDate;
 @end

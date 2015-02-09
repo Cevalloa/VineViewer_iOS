@@ -23,5 +23,25 @@
     
 }
 
+-(NSString *)methodFormatStringWithDate{
+    
+    //Format from the API is yyyy-MM-dd'T'hh:mm:ss.AAAAAA
+    
+    
+    NSDateFormatter *dateSetsFormat = [[NSDateFormatter alloc] init];
+    
+    //Set to the API's date feed (So the NSString can be read)
+    [dateSetsFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    //Convert the incoming string to a date
+    NSDate *dateConvertedFromString = [dateSetsFormat dateFromString:[self substringToIndex:10]];
+    
+    //Set to the format we want to show
+    [dateSetsFormat setDateFormat:@"MMM dd yyyy"];
+    
+    return [dateSetsFormat stringFromDate:dateConvertedFromString];
+}
+
+
 @end
 
