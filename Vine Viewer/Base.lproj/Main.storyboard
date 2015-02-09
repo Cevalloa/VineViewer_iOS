@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Videos Table View Controller-->
+        <!--Vine Videos-->
         <scene sceneID="xr8-SZ-jfd">
             <objects>
                 <tableViewController id="SEk-13-Wdz" customClass="VideosTableViewController" sceneMemberID="viewController">
@@ -19,22 +19,53 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jmu-vN-VFS" id="zpI-fh-lLv">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Da8-5g-2Kw">
-                                            <rect key="frame" x="8" y="8" width="98" height="72"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Da8-5g-2Kw">
+                                            <rect key="frame" x="8" y="8" width="85" height="71"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="85" id="chj-el-n9O"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxc-9x-hrO">
-                                            <rect key="frame" x="114" y="13" width="291" height="22"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxc-9x-hrO">
+                                            <rect key="frame" x="108" y="13" width="484" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hh-Qi-qTc">
-                                            <rect key="frame" x="114" y="43" width="312" height="23"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hh-Qi-qTc">
+                                            <rect key="frame" x="108" y="44" width="484" height="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uju-0V-NJq">
+                                            <rect key="frame" x="98" y="8" width="5" height="71"/>
+                                            <color key="backgroundColor" red="0.27450980390000002" green="0.81568627449999997" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="5" id="zD0-VD-1TV"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="Da8-5g-2Kw" firstAttribute="leading" secondItem="zpI-fh-lLv" secondAttribute="leadingMargin" id="6Tc-I1-6K3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="uju-0V-NJq" secondAttribute="bottom" id="A3B-R6-xSN"/>
+                                        <constraint firstItem="Cxc-9x-hrO" firstAttribute="top" secondItem="zpI-fh-lLv" secondAttribute="topMargin" constant="5" id="BYx-Wt-TH6"/>
+                                        <constraint firstItem="uju-0V-NJq" firstAttribute="leading" secondItem="Da8-5g-2Kw" secondAttribute="trailing" constant="5" id="CJP-az-yOt"/>
+                                        <constraint firstItem="Cxc-9x-hrO" firstAttribute="leading" secondItem="Da8-5g-2Kw" secondAttribute="trailing" constant="5" id="F6z-k5-NS1"/>
+                                        <constraint firstItem="7Hh-Qi-qTc" firstAttribute="leading" secondItem="Da8-5g-2Kw" secondAttribute="trailing" constant="5" id="LcR-na-umb"/>
+                                        <constraint firstItem="Da8-5g-2Kw" firstAttribute="top" secondItem="zpI-fh-lLv" secondAttribute="topMargin" id="P24-67-EDC"/>
+                                        <constraint firstItem="uju-0V-NJq" firstAttribute="top" secondItem="zpI-fh-lLv" secondAttribute="topMargin" id="PdZ-vb-AKz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Cxc-9x-hrO" secondAttribute="trailing" id="WMV-5u-WIZ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7Hh-Qi-qTc" secondAttribute="trailing" id="Ywt-OJ-zcT"/>
+                                        <constraint firstItem="7Hh-Qi-qTc" firstAttribute="leading" secondItem="uju-0V-NJq" secondAttribute="trailing" constant="5" id="aJp-xT-3Yy"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Da8-5g-2Kw" secondAttribute="bottom" id="fmI-VU-JjZ"/>
+                                        <constraint firstItem="7Hh-Qi-qTc" firstAttribute="top" secondItem="Cxc-9x-hrO" secondAttribute="bottom" constant="15" id="skI-4j-NQa"/>
+                                        <constraint firstItem="Cxc-9x-hrO" firstAttribute="leading" secondItem="uju-0V-NJq" secondAttribute="trailing" constant="5" id="zSi-Sl-6G9"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="F6z-k5-NS1"/>
+                                            <exclude reference="LcR-na-umb"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageViewThumbnailUrl" destination="Da8-5g-2Kw" id="XJF-Ze-KIp"/>
@@ -48,14 +79,14 @@
                             <outlet property="delegate" destination="SEk-13-Wdz" id="P3B-jM-e18"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ZJf-gu-GhV"/>
+                    <navigationItem key="navigationItem" title="Vine Videos" id="ZJf-gu-GhV"/>
                     <connections>
                         <segue destination="p5a-HR-wqk" kind="show" identifier="segueVideoDetail" id="jdf-yb-htA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Qk-it-FJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1100" y="262"/>
+            <point key="canvasLocation" x="1100" y="252"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="t07-oA-xfz">
@@ -170,6 +201,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="osn-Qb-jfJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.16078431372549021" green="0.63137254901960782" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -13,7 +13,7 @@
 //Shortens string numbers over 1000.. ex: 11000 -> 11k && 999 -> 999
 -(NSString *)methodShortenNumber{
     
-    int numberForIndex = self.length - 3;
+    NSInteger numberForIndex = self.length - 3;
     
     if (numberForIndex <= 0) {
         return self;
