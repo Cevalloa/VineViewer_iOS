@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>73D43AD5-EBD5-48AE-BF91-11D2E71A9126</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Vine Viewer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>16A359592C5332F291EA095486DFA102017007E1</key>
+		<string>https://github.com/Cevalloa/VineViewer_iOS</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Vine Viewer.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>16A359592C5332F291EA095486DFA102017007E1</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Cevalloa/VineViewer_iOS</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>16A359592C5332F291EA095486DFA102017007E1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>16A359592C5332F291EA095486DFA102017007E1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Vine%20Viewer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
