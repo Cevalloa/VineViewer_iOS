@@ -12,7 +12,7 @@
 From the beginning I wanted to construct this application with the guidelines set by the Modal View Controller architecture design pattern. But I also wanted to place an emphasis on escapulation, so the code would be easier to maintain and update.
 
 I wanted everything to be organized and easy to read, so I divided the project's classes into folders. 
-Screen 1 - Video List: holds the VideosTableViewController and CustomCell. These is the Table View Controller and it's custom table view cell, respectively. <br>
+Screen 1 - Video List: holds the VideosTableViewController and CustomCell. This is the Table View Controller and it's custom table view cell, respectively. <br>
 Screen 2 - Detail View: holds DetailViewController, the class responsible for showing the detail of the selected row & video.<br>
 Categories - : Holds NSObject+ConnectionController and NSString+StringHelperMethods, the modal layer and methods used for strings throughout the app<br>
 
